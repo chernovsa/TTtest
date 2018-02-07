@@ -1,4 +1,4 @@
-package main.java.sample.keeper;
+package sample.keeper;
 
 /**
  * Created by s.chernov on 07.02.2018.

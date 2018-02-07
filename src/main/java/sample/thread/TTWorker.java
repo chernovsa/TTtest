@@ -1,10 +1,10 @@
-package main.java.sample.thread;
+package sample.thread;
 
-import main.java.sample.thread.done.FirstDoneWrapper;
-import main.java.sample.thread.done.IDoneWrapper;
-import main.java.sample.thread.done.SecondDoneWrapper;
-import main.java.sample.keeper.StringKeeper;
-import main.java.sample.thread.done.DoneWrapper;
+import sample.thread.done.FirstDoneWrapper;
+import sample.thread.done.IDoneWrapper;
+import sample.thread.done.SecondDoneWrapper;
+import sample.keeper.StringKeeper;
+import sample.thread.done.DoneWrapper;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

@@ -1,4 +1,4 @@
-package main.java.sample.thread.done;
+package sample.thread.done;
 
 /**
  * Created by schernov on 07.02.18.
