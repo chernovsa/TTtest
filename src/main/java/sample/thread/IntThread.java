@@ -1,7 +1,7 @@
-package sample.thread;
+package main.java.sample.thread;
 
-import sample.thread.done.IDoneWrapper;
-import sample.keeper.StringKeeper;
+import main.java.sample.thread.done.IDoneWrapper;
+import main.java.sample.keeper.StringKeeper;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

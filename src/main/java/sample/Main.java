@@ -1,4 +1,4 @@
-package sample;
+package main.java.sample;
 
 import javafx.application.Application;
 import javafx.concurrent.Service;
@@ -12,8 +12,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import sample.keeper.StringKeeper;
-import sample.thread.TTWorker;
+import main.java.sample.keeper.StringKeeper;
+import main.java.sample.thread.TTWorker;
 
 public class Main extends Application {
 

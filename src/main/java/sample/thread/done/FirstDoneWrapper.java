@@ -1,22 +1,22 @@
-package sample.thread.done;
+package main.java.sample.thread.done;
 
 /**
  * Created by schernov on 07.02.18.
  */
-public class SecondDoneWrapper implements IDoneWrapper {
+public class FirstDoneWrapper implements IDoneWrapper {
     private DoneWrapper doneWrapper;
 
-    public SecondDoneWrapper(DoneWrapper doneWrapper) {
+    public FirstDoneWrapper(DoneWrapper doneWrapper) {
         this.doneWrapper = doneWrapper;
     }
 
     @Override
     public void setDone() {
-        doneWrapper.setSecondDone();
+        doneWrapper.setFirstDone();
     }
 
     @Override
     public boolean isDone() {
-       return doneWrapper.isFirstDone();
+       return doneWrapper.isSecondDone();
     }
 }
