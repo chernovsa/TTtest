@@ -9,7 +9,7 @@ import java.util.concurrent.locks.Lock;
 /**
  * Created by s.chernov on 07.02.2018.
  */
-public abstract class IntThread implements Runnable {
+public class IntThread implements Runnable {
     private int value;
     private int iterations;
     private StringKeeper keeper;
@@ -37,7 +37,24 @@ public abstract class IntThread implements Runnable {
           runMethod();
         }
     }
-  abstract   void runMethod();
+
+    void runMethod(){
+        lock.lock();
+        try {
+            while(!doneWrapper.isDone())
+                waitCondition.await();
+            doWork();
+            doneWrapper.setDone();
+            signalCondition.signal();
+        }
+        catch(InterruptedException  e)
+        {
+            e.printStackTrace();
+        }
+        finally {
+            lock.unlock();
+        }
+    }
 
    final protected void doWork()
     {

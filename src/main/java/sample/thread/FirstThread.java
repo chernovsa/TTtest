@@ -15,23 +15,4 @@ public class FirstThread extends IntThread{
     public FirstThread(int value, int iterations, StringKeeper keeper, Lock lock, Condition waitCondition, Condition signalCondition, IDoneWrapper doneWrapper) {
         super(value, iterations, keeper, lock, waitCondition, signalCondition, doneWrapper);
     }
-
-    void runMethod(){
-        lock.lock();
-        try {
-            while (!doneWrapper.isDone())
-                waitCondition.await();
-            doWork();
-            doneWrapper.setDone();
-            signalCondition.signal();
-        }
-        catch(InterruptedException  e)
-        {
-            e.printStackTrace();
-        }
-        finally {
-            lock.unlock();
-        }
-    }
-
 }
